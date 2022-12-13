@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="main1">
+      <div class="outer">
+        <div class="topsection">
+          <span class="name" onclick="search()"> Chetna Airways </span>
+          <div class="topcontainer">
+            <!-- <button id="signup"> <img src="signup icon4.png" alt="" id="signupicon">  SIGNUP</button> -->
+
+            <div class="buttons">
+              <button id="help">
+                <img src="help icon2.webp" alt="" id="helpicon" />HELP
+              </button>
+              <button id="signup">
+                <img src="3631618.png" alt="" id="signupicon" /> SIGNUP
+              </button>
+              <button id="login">
+                <img src="6681225.png" alt="" id="loginicon" /> LOGIN
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="leftsection">
+          <div class="leftsectionh1">
+            <h1>Top 10 Searches</h1>
+          </div>
+          <div class="leftsection2">
+            <div class="searchescontainer">
+              <div class="topperscontainer" onclick="addthis('ng')">
+                <img src="flight3.png" alt="" class="flight3icon" />
+                <span class="first">Delhi</span>
+                <span> <img src="round.png" alt="" id="roundimage" /></span>
+                <span class="second">Goa </span>
+                <!-- <img src="flightland2.png" alt="" class="flightland"> -->
+              </div>
+              <div class="topperscontainer" onclick="addthis('bn')">
+                <img src="flight3.png" alt="" class="flight3icon" />
+                <span class="first">Bengaluru</span>
+                <span> <img src="round.png" alt="" id="roundimage" /></span>
+                <span class="second">Delhi</span>
+                <!-- <img src="flightland2.png" alt="" class="flightland"> -->
+              </div>
+              <div class="topperscontainer" onclick="addthis('mg')">
+                <img src="flight3.png" alt="" class="flight3icon" />
+                <span class="first">Mumbai</span>
+                <span> <img src="round.png" alt="" id="roundimage" /></span>
+                <span class="second">Goa</span>
+                <!-- <img src="flightland2.png" alt="" class="flightland"> -->
+              </div>
+              <div class="topperscontainer" onclick="addthis('nb')">
+                <img src="flight3.png" alt="" class="flight3icon" />
+                <span class="first">Delhi</span>
+                <span> <img src="round.png" alt="" id="roundimage" /></span>
+                <span class="second">Bengaluru</span>
+                <!-- <img src="flightland2.png" alt="" class="flightland"> -->
+              </div>
+              <div class="topperscontainer" onclick="addthis('mb')">
+                <img src="flight3.png" alt="" class="flight3icon" />
+                <span class="first">Mumbai</span>
+                <span> <img src="round.png" alt="" id="roundimage" /></span>
+                <span class="second">Bengaluru</span>
+                <!-- <img src="flightland2.png" alt="" class="flightland"> -->
+              </div>
+              <div class="topperscontainer" onclick="addthis('pn')">
+                <img src="flight3.png" alt="" class="flight3icon" />
+                <span class="first">Pune</span>
+                <span> <img src="round.png" alt="" id="roundimage" /></span>
+                <span class="second">Delhi</span>
+                <!-- <img src="flightland2.png" alt="" class="flightland"> -->
+              </div>
+              <div class="topperscontainer" onclick="addthis('bm')">
+                <img src="flight3.png" alt="" class="flight3icon" />
+                <span class="first">Bengaluru</span>
+                <span> <img src="round.png" alt="" id="roundimage" /></span>
+                <span class="second">Mumbai</span>
+                <!-- <img src="flightland2.png" alt="" class="flightland"> -->
+              </div>
+              <div class="topperscontainer" onclick="addthis('nk')">
+                <img src="flight3.png" alt="" class="flight3icon" />
+                <span class="first">Delhi</span>
+                <span> <img src="round.png" alt="" id="roundimage" /></span>
+                <span class="second">Kolkata</span>
+                <!-- <img src="flightland2.png" alt="" class="flightland"> -->
+              </div>
+              <div class="topperscontainer" onclick="addthis('ml')">
+                <img src="flight3.png" alt="" class="flight3icon" />
+                <span class="first">Mumbai</span>
+                <span> <img src="round.png" alt="" id="roundimage" /></span>
+                <span class="second">Indore</span>
+                <!-- <img src="flightland2.png" alt="" class="flightland"> -->
+              </div>
+              <!-- <div class="topperscontainer" onclick="addthis('ms')">
+                <img src="flight3.png" alt="" class="flight3icon" />
+                <span class="first">Delhi</span>
+                <span> <img src="round.png" alt="" id="roundimage" /></span>
+                <span class="second">Indore</span>
+                <img src="flightland2.png" alt="" class="flightland"> 
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="mainsection">
+          <div class="main2">
+            <div class="maincontainer">
+              <div id="heading">
+                <h1>Search Here ..... For Your Journey</h1>
+              </div>
+              <div id="radio">
+                <span class="ONEWAY1">
+                <input
+                  type="radio"
+                  name="trip"
+                  id="oneway"
+                  checked="checked"
+                  onclick="oneway()"
+                />
+                <label for="oneway">One Way</label>
+                </span>
+                <span class="TWOWAY2">
+                <input
+                  type="radio"
+                  name="trip"
+                  id="round"
+                  onclick="roundway()"
+                />
+                <label for="round">Round Trip</label>
+              </span>
+              </div>
+
+              <span class="from">
+                <label for="from">From</label>
+                <input
+                  type="text"
+                  id="from"
+                  list="selection"
+                  placeholder="enter starting destination"
+                  onkeyup="checkthis('from')"
+                  required
+                />
+                <datalist name="" id="selection"> </datalist>
+              </span>
+              <span> <img src="round.png" alt="" id="roundimage2" /></span>
+              <span class="to">
+                <label for="to">To</label>
+                <input
+                  type="text"
+                  id="to"
+                  list="selection"
+                  placeholder="where you want to reach"
+                  onkeyup="checkthis('to')"
+                  required
+                />
+              </span>
+              <div id="depart">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" />
+              </div>
+              <span class="persons">
+                Adults
+                <select name="adults" class="adults">
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                  <option value="">5</option>
+                </select>
+              </span>
+              <span class="persons">
+                Children
+                <select name="1" class="adults">
+                  <option value="">0</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                  <option value="">5</option>
+                </select>
+              </span>
+              <span class="persons">
+                Infants
+                <select name="1" class="adults">
+                  <option value="">0</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                  <option value="">5</option>
+                </select>
+              </span>
+            </div>
+          </div>
+          <div class="search">
+            <a href="index2.html?" target="_blank" id="text">
+              <button id="searchbtn" onclick="search2()">
+                <img src="searchicon.png" alt="" id="searchicon" /> Search
+              </button></a
+            >
+          </div>
+        </div>
+        <div class="bottomsection">
+       
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

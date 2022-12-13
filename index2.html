@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+   
+  </head>
+
+  <body>
+    <div class="outer2">
+      <div class="control">
+        <span id="secondpageradiofirst">
+          <span id="for_hiding" onclick="hide_date_of_secondpage()">
+            <label for="one_way">One Way</label>
+            <input type="radio" name="one_way" id="one_way" />
+          </span>
+        </span>
+        <span id="secondpageradiosecond">
+          <label for="two_way">Round-Trip</label>
+          <input
+            type="radio"
+            id="two_way"
+            name="one_way"
+            onclick="round_trip()"
+          />
+        </span>
+      </div>
+      <div class="container3">
+        <label for="firstinput">From</label>
+        <input type="text" id="firstinput" />
+        <label for="secondinput">To</label>
+        <input type="text" id="secondinput" />
+        <input type="date" id="firstdate" />
+
+        <span id="second_page_return_date">
+          Return<input type="date" id="second_page_date_input_tag" />
+        </span>
+        <button id="btn0"  onclick="" >Search</button>
+        <button id="btn1">LOGIN</button>
+        <button id="btn2">SIGNUP</button>
+      </div>
+    </div>
+    <div class="maincontainer2">
+      <div id="sorted">
+        <div class="timingbased">
+          <h2>Filter Out-On Time</h2>
+          <div class="applythis">
+            <button class="btn" onclick="timebased(6,12,'resultdiv1')">
+              6:00 AM - 11:50 AM</button
+            ><br />
+            <button class="btn" onclick="timebased(12,18 ,'resultdiv1')">
+              12:01 PM - 6:00 PM</button
+            ><br />
+            <button class="btn" onclick="timebased(18,24,'resultdiv1')">
+              6:00 PM - 11:50 PM</button
+            ><br />
+            <button class="btn" onclick="timebased(1,6,'resultdiv1')">
+              12:00 AM - 6:00 AM</button
+            ><br />
+          </div>
+        </div>
+        <div id="pricebased">
+          <h2>Return</h2>
+          <div class="applythis">
+            <button class="btn" onclick="timebased(6,12,'resultdiv2')">
+              6:00 AM - 11:50 AM</button
+            ><br />
+            <button class="btn" onclick="timebased(12,18, 'resultdiv2')">
+              12:01 PM - 6:00 PM</button
+            ><br />
+            <button class="btn" onclick="timebased(18,24 ,'resultdiv2')">
+              6:00 PM - 11:50 PM</button
+            ><br />
+            <button class="btn" onclick="timebased(1,6, 'resultdiv2')">
+              12:00 AM - 6:00 AM</button
+            ><br />
+          </div>
+        </div>
+      </div>
+
+      <div id="resultdiv">
+        <span id="resultdiv1"> </span>
+        <span id="resultdiv2"> </span>
+      </div>
+      <div id="ticketscontainer">
+              <span id="firstticket">
+                <tr>
+                  
+                </tr>
+              </span>
+              <span id="secondticket"></span>  
+      </div>
+    </div>
+    <script src="script2.js" defer></script>
+  </body>
+</html>
